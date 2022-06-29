@@ -1,12 +1,20 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Playlist {
     public static void main(String[] args) {
         // create a playlist
         ArrayList<String> myCodingPlaylist = new ArrayList<>();
-
         System.out.println("**************  Welcome to myCodingPlaylist! Let's get on with writing some code :)  ************** ");
 
+        Scanner myObj = new Scanner(System.in);
+        System.out.println("Enter a song to add to your playlist (song title and artist)");
+
+        String song = myObj.nextLine();  // Read user input
+        myCodingPlaylist.add(song);
+
+        System.out.println("************* " + song + " has been added to the playlist! **************");
+        System.out.println("Playlist: ");
         // adding songs to playlist
         myCodingPlaylist.add("She Drives Me Crazy - Fine Young Cannibals");
         myCodingPlaylist.add("\nDeadly Valentine (Soulwax Remix) - Charlotte Gainsbourg");
